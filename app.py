@@ -42,8 +42,8 @@ if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-        speaker = st.image("user.png")
+        speaker = st.image("👤")
         if message["role"]=="assistant":
-            speaker= st.image("rusalka2.jpg")
+            speaker= st.image("👩")
 
         st.write(speaker + ": " + message["content"])
